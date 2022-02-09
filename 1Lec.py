@@ -4,11 +4,13 @@ from skimage.io import imshow, show
 from skimage.io import imread, imsave
 from skimage import data, exposure, img_as_float
 from skimage.exposure import histogram
+
 parser = argparse.ArgumentParser()
 parser.add_argument('-p', '--path', type=str)
 parser.add_argument('-r', '--result', type=str)
 parser.add_argument('-gm', '--gamma', type=float)
 parser.add_argument('-gn', '--gain', type=float)
+
 args = parser.parse_args()
 path = args.path
 img = imread(path)
